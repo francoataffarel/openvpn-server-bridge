@@ -1,0 +1,13 @@
+#!/bin/bash
+# /etc/openvpn/bridge-stop
+
+br="br0"
+tap="tap0"
+ifconfig $br down
+brctl delbr $br
+
+for t in $tap; do
+openvpn --rmtun --dev $t
+done
+
+iptables -F
