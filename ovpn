@@ -9,3 +9,4 @@ persist-key
 persist-tun
 remote-cert-tls server
 route 192.168.9.0/24
+route 192.168.10.0/24
