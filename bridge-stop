@@ -11,4 +11,5 @@ openvpn --rmtun --dev $t
 done
 
 iptables -F
+service networking restart
 
