@@ -15,7 +15,7 @@ tap="tap0"
 # Define physical ethernet interface to be bridged
 # with TAP interface(s) above.
 eth="eth1"
-eth_ip="172.16.100.X"
+eth_ip=$(ifconfig | sed -n '11 p' | awk '{print $2}')
 eth_gw="172.16.100.1"
 eth_netmask="255.255.255.0"
 eth_broadcast="172.16.100.255"
